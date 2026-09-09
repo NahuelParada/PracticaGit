@@ -60,8 +60,12 @@ public abstract class Animal {
     }
 
     public String enfermarse(){
+        if (this.salud.equals(Salud.ENFERMO)) {
+            return "El animal ya está enfermo";
+        }
+
         setSalud(Salud.ENFERMO);
-        return "El animal esta enfermo";
+        return "El animal se enfermó";
     }
 
     public String ensuciarse(){
@@ -71,4 +75,6 @@ public abstract class Animal {
         }
         return "El animal ya esta sucio";
     }
+
+    public abstract String hacerSonido();
 }
