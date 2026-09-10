@@ -46,6 +46,4 @@ public abstract class Persona {
         this.salario = salario;
     }
 
-    
-
 }
